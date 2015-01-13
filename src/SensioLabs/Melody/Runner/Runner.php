@@ -78,7 +78,7 @@ TEMPLATE;
 
         return strtr($template, array(
             '{{ head }}' => $this->getHead(),
-            '{{ code }}' => $resource->getContent()
+            '{{ code }}' => $resource->getContent(),
         ));
     }
 

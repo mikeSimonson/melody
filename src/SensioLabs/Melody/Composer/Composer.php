@@ -101,16 +101,17 @@ class Composer
             $composerPath = sprintf('%s/%s', getcwd(), $candidateName);
             if (file_exists($composerPath)) {
                 $phpFinder = new PhpExecutableFinder();
+
                 return array_merge(
                     array(
                         $phpFinder->find(false),
-                        $composerPath
+                        $composerPath,
                     ),
                     $phpFinder->findArguments()
                 );
             }
         }
 
-        return null;
+        return;
     }
 }
